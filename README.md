@@ -53,9 +53,9 @@
 ```yaml
 ports:
   - "48123:51821/tcp" # Change the left number
+```
 
-
-🛠️ Manual Configuration
+## 🛠️ Manual Configuration
 If you prefer not to use the script, you can configure it manually:
 
 1. Copy the example env file:
