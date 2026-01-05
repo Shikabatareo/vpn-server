@@ -71,7 +71,7 @@ Bash
 docker compose up -d
 
 
-MIT License
+# MIT License
 
 Copyright (c) 2026 [Shikabatareo]
 
