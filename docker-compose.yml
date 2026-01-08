@@ -3,13 +3,13 @@ services:
   wg-easy:
     environment:
       - WG_HOST=${WG_HOST}
-      - PASSWORD_HASH=${WG_PASSWORD}                                                 
+      - PASSWORD=${WG_PASSWORD}
       - WG_PORT=51820
       - WG_DEFAULT_DNS=1.1.1.1
       - WG_DEFAULT_ADDRESS=10.8.0.x
       - WG_ALLOWED_IPS=0.0.0.0/0
       - WG_PERSISTENT_KEEPALIVE=25
-    image: ghcr.io/wg-easy/wg-easy
+    image: ghcr.io/wg-easy/wg-easy:13
     container_name: my-vpn
     restart: unless-stopped
     cap_add:
@@ -17,7 +17,7 @@ services:
       - SYS_MODULE
     sysctls:
       - net.ipv4.ip_forward=1
-      - net.ipv4.conf.all.src_valid_mark=1 
+      - net.ipv4.conf.all.src_valid_mark=1
     volumes:
       - ./config:/etc/wireguard
     ports:
@@ -28,5 +28,5 @@ services:
     container_name: watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 3600 --cleanup                                             
+    command: --interval 3600 --cleanup
     restart: unless-stopped
