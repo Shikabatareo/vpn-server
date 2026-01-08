@@ -69,7 +69,7 @@ cp .env.example .env
 3. Start the container:
 
 ```bash
-   docker compose up -d
+docker compose up -d
 ```
 
 # MIT License
