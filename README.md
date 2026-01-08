@@ -60,18 +60,17 @@ If you prefer not to use the script, you can configure it manually:
 
 1. Copy the example env file:
 
-Bash
-
-**cp .env.example .env**
+```bash
+cp .env.example .env
+```
 
 2. Edit .env and set your WG_HOST (Server IP) and WG_PASSWORD.
 
 3. Start the container:
 
-Bash
-
-**docker compose up -d**
-
+```bash
+   docker compose up -d
+```
 
 # MIT License
 
